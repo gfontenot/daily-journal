@@ -9,9 +9,9 @@ let router = Router()
 let formatter = DateFormatter()
 formatter.dateFormat = "MM/dd"
 
-let questionPath = URL(fileURLWithPath: "./data/questions.json")
-let questionData = try! Data(contentsOf: questionPath)
-let questions = try! JSONSerialization.jsonObject(with: questionData) as! [String: String]
+let questions = URL(fileURLWithPath: "./data/questions.json")
+  |> { try! Data(contentsOf: $0) }
+  |> { try! JSONSerialization.jsonObject(with: $0) as! [String: String] }
 
 router.get("/") { request, response, next in
   let today = formatter.string(from: Date())
