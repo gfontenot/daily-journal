@@ -6,9 +6,18 @@ HeliumLogger.use()
 
 let router = Router()
 
-router.get("/") {
-  request, response, next in
-  response.send("Hello World!")
+let formatter = DateFormatter()
+formatter.dateFormat = "MM/dd"
+
+let questionPath = URL(fileURLWithPath: "./data/questions.json")
+let questionData = try! Data(contentsOf: questionPath)
+let questions = try! JSONSerialization.jsonObject(with: questionData) as! [String: String]
+
+router.get("/") { request, response, next in
+  let today = formatter.string(from: Date())
+  let question = questions[today]!
+
+  response.send(question)
   next()
 }
 
