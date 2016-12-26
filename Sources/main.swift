@@ -9,12 +9,11 @@ let router = Router()
 router.add(templateEngine: StencilTemplateEngine())
 
 router.get("/") { request, response, next in
-  let date = request.queryParameters["date"]
+  let context = request.queryParameters["date"]
+    .flatMap(question(for:))
+    .map(displayContext)
 
-  if let date = date {
-    let context = question(for: date)
-      |> displayContext
-
+  if let context = context {
     try! response.render("question.stencil", context: context).end()
   } else {
     try! response.render("redirect.stencil", context: [:]).end()
@@ -25,13 +24,12 @@ router.get("/") { request, response, next in
 
 
 router.get("/create") { request, response, next in
-  let date = request.queryParameters["date"]
+  let url = request.queryParameters["date"]
+    .flatMap(question(for:))
+    .map(asPrompt)
+    .map(dayoneURL)
 
-  if let date = date {
-    let url = question(for: date)
-      |> asPrompt
-      |> dayoneURL
-
+  if let url = url {
     try! response.redirect(url)
   } else {
     try! response.render("redirect.stencil", context: [:]).end()
