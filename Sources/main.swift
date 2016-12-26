@@ -16,7 +16,7 @@ router.get("/") { request, response, next in
   if let context = context {
     try! response.render("question.stencil", context: context).end()
   } else {
-    try! response.render("redirect.stencil", context: [:]).end()
+    try! response.performRedirect()
   }
 
   next()
@@ -32,7 +32,7 @@ router.get("/create") { request, response, next in
   if let url = url {
     try! response.redirect(url)
   } else {
-    try! response.render("redirect.stencil", context: [:]).end()
+    try! response.performRedirect()
   }
 
   next()
