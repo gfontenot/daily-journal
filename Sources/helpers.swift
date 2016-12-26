@@ -1,18 +1,22 @@
 import Foundation
 
-func context(for question: String) -> [String: String] {
+func displayContext(_ question: String) -> [String: String] {
   return [
     "question": question,
-    "creation-url": dayoneURL(for: "> \(question)\r\r")
+    "creation-url": question |> asPrompt |> dayoneURL
   ]
 }
 
-func dayoneURL(for content: String) -> String {
+func asPrompt(_ question: String) -> String {
+  return "> \(question)"
+}
+
+func dayoneURL(_  content: String) -> String {
   let journalName = encoded("Daily Q & A")
   return "dayOne://post?journal=\(journalName)&entry=\(encoded(content))"
 }
 
-func encoded(_ string: String) -> String {
+private func encoded(_ string: String) -> String {
   var allowed: CharacterSet = .urlHostAllowed
   allowed.remove(charactersIn: "&")
   return string.addingPercentEncoding(withAllowedCharacters: allowed)!
