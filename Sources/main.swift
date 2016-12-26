@@ -13,8 +13,15 @@ router.get("/") { request, response, next in
     |> displayContext
 
   try! response.render("question.stencil", context: context).end()
+  next()
+}
 
+router.get("/create") { request, response, next in
+  let url = question(for: .today)
+    |> asPrompt
+    |> dayoneURL
 
+  try! response.redirect(url)
   next()
 }
 
