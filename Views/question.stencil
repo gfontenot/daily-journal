@@ -1,8 +1,0 @@
-<html lang="en">
-<body>
-    <main>
-      {{ question }}
-      <a href="{{ creation-url }}">Create Entry</a>
-    </main>
-</body>
-</html>

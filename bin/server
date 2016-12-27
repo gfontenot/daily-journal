@@ -3,4 +3,4 @@
 set -e
 
 swift build
-./.build/debug/daily-journal
+vapor run serve
