@@ -18,20 +18,4 @@ drop.get("/") { request in
   }
 }
 
-
-drop.get("/create") { request in
-  let url = request.data["date"]?.string
-    .flatMap(question(for:))
-    .map(asPrompt)
-    .map(dayoneURL)
-
-  if let url = url {
-    return Response(redirect: url)
-  } else {
-    return try drop.view.make("today", [
-      "title": "Today's Prompt"
-    ])
-  }
-}
-
 drop.run()
