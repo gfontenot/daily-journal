@@ -1,6 +1,6 @@
 #extend("base")
 
 #export("main") {
-  #(question)
-  <a href="#(creation-url)">Create Entry</a>
+  <blockquote>#(question)</blockquote>
+  <a href="#(creation-url)" id="create-entry">Create Entry in Day One</a>
 }

@@ -1,0 +1,35 @@
+main {
+  max-width: 760px;
+  margin: auto;
+}
+
+blockquote {
+  font-size: 50px;
+  font-style: italic;
+  margin: 50px 20px 20px 20px;
+  padding: 10px 20px;
+  position: relative;
+  color: #696969;
+}
+
+blockquote:before {
+  display: block;
+  position: absolute;
+  content: "\201C";
+  font-size: 80px;
+  left: -20px;
+  top: -10px;
+  color: #7a7a7a;
+}
+
+#create-entry {
+  color: white;
+  width: 170px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  display: block;
+  background-color: #44C0FF;
+  padding: 5px 10px;
+  margin: auto;
+}
