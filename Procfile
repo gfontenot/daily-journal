@@ -1,1 +1,1 @@
-web: .build/release/daily-journal
+web: APP --env=production --workdir=\"./\" --config:servers.default.port=\\$PORT
