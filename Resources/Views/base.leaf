@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>#(title)</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    <main>
+      #import("main")
+    </main>
+  </body>
+</html>
