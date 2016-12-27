@@ -1,6 +1,0 @@
-#extend("base")
-
-#export("main") {
-  <p>Redirecting</p>
-  <script src="js/date-redirect.js"></script>
-}

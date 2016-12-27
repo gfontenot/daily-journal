@@ -12,8 +12,8 @@ drop.get("/") { request in
   if let context = context {
     return try drop.view.make("question", context)
   } else {
-    return try drop.view.make("redirect", [
-      "title": "Redirecting"
+    return try drop.view.make("today", [
+      "title": "Today's Prompt"
     ])
   }
 }
@@ -28,8 +28,8 @@ drop.get("/create") { request in
   if let url = url {
     return Response(redirect: url)
   } else {
-    return try drop.view.make("redirect", [
-      "title": "Redirecting"
+    return try drop.view.make("today", [
+      "title": "Today's Prompt"
     ])
   }
 }
