@@ -31,16 +31,7 @@ blockquote {
   padding: 10px 20px;
   position: relative;
   color: #696969;
-}
-
-blockquote:before {
-  display: block;
-  position: absolute;
-  content: "\201C";
-  font-size: 80px;
-  left: -20px;
-  top: -10px;
-  color: #7a7a7a;
+  text-align: center;
 }
 
 #create-entry {
