@@ -1,6 +1,5 @@
 #extend("base")
 
 #export("main") {
-  <p>Loading</p>
   <script src="js/load-prompt.js"></script>
 }
