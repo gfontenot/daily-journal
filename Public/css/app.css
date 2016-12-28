@@ -10,6 +10,18 @@ body {
 
 main {
   animation: fade .5s linear;
+  margin-top: 30px;
+}
+
+h2 {
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  padding-bottom: 10px;
+  line-height: 1.25;
 }
 
 blockquote {

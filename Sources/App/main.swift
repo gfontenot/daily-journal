@@ -18,4 +18,8 @@ drop.get("/") { request in
   }
 }
 
+drop.get("/about") { _ in
+  return try drop.view.make("about")
+}
+
 drop.run()
