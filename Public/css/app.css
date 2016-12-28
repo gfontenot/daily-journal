@@ -42,3 +42,29 @@ blockquote:before {
   padding: 5px 10px;
   margin: auto;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  margin: 5px;
+}
+
+footer a {
+  font-style: italic;
+  color: light-gray;
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: #AAAAAA;
+}
