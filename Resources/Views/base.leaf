@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>#(title)</title>
-
-    <link rel="stylesheet" href="/css/app.css">
-    <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="initial-scale=1.0">
-  </head>
+  #embed("head")
   <body>
     <main>
       #import("main")
