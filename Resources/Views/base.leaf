@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
-  #embed("head")
+  <head>
+    <title>#(title)</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="/js/datepicker.js">
+    </script>
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
+  </head>
   <body>
     <main>
       #import("main")
     </main>
-    #embed("footer.html")
+    <footer>
+      <ul>
+        <li>
+          <a href="/">today</a>
+        </li>
+        <li>
+          <a href="#" id="datepicker">
+            jump to date
+          </a>
+          <input type="hidden" id="_datepicker" />
+          <div></div>
+        </li>
+        <li>
+          <a href="/about">
+            about
+          </a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

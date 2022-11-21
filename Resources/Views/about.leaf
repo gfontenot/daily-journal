@@ -1,23 +1,23 @@
-#extend("base")
-
-#export("main") {
-  <h2>What is this?</h2>
-  <p>
-    This website displays a simple writing prompt. That's it. Every day, it
-    changes. However, it repeats every year. So, if you were to revisit the
-    site one year from today, you'd see the same prompt as you do right now.
-    This means you can continue to answer the same questions every year on the
-    same day, and see how your answers change over time.
-  </p>
-  <p>
-    This app is best used (in my opinion), with <a href="http://dayoneapp.com">Day One</a>, but you can use whatever
-    journaling system you prefer. If you <em>do</em> use Day One, you can
-    easily create journal entries by simply clicking the button below each
-    prompt. Additionally, if you create a separate journal called "Daily Q & A"
-    for these kinds of entries, they will automatically be added there.
-  </p>
-  <h2>Attribution</h2>
-  <p>
-    This site was lovingly crafted by <a href="http://gordonfontenot.com">Gordon Fontenot</a>. The source is available <a href="https://github.com/gfontenot/daily-journal">on GitHub</a>. The daily questions were taken from <a href="https://www.amazon.com/Day-5-Year-Journal-Potter-Style/dp/0307719774/ref=sr_1_1">Q&A a Day: 5-Year Journal</a>.
-  </p>
-}
+#extend("base"):
+  #export("main"):
+    <h2>What is this?</h2>
+    <p>
+      This website displays a simple writing prompt. That's it. Every day, it
+      changes. However, it repeats every year. So, if you were to revisit the
+      site one year from today, you'd see the same prompt as you do right now.
+      This means you can continue to answer the same questions every year on the
+      same day, and see how your answers change over time.
+    </p>
+    <p>
+      This app is best used (in my opinion), with <a href="http://dayoneapp.com">Day One</a>, but you can use whatever
+      journaling system you prefer. If you <em>do</em> use Day One, you can
+      easily create journal entries by simply clicking the button below each
+      prompt. Additionally, if you create a separate journal called "Daily Q & A"
+      for these kinds of entries, they will automatically be added there.
+    </p>
+    <h2>Attribution</h2>
+    <p>
+      This site was lovingly crafted by <a href="http://gordonfontenot.com">Gordon Fontenot</a>. The source is available <a href="https://github.com/gfontenot/daily-journal">on GitHub</a>. The daily questions were taken from <a href="https://www.amazon.com/Day-5-Year-Journal-Potter-Style/dp/0307719774/ref=sr_1_1">Q&A a Day: 5-Year Journal</a>.
+    </p>
+  #endexport
+#endextend

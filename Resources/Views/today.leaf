@@ -1,5 +1,5 @@
-#extend("base")
-
-#export("main") {
-  <script src="js/load-prompt.js"></script>
-}
+#extend("base"):
+  #export("main"):
+    <script src="js/load-prompt.js"></script>
+  #endexport
+#endextend

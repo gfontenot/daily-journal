@@ -4,7 +4,7 @@ func displayContext(_ question: String) -> [String: String] {
   return [
     "title": "Daily Prompt",
     "question": question,
-    "creation-url": question |> asPrompt |> dayoneURL
+    "creation_url": question |> asPrompt |> dayoneURL
   ]
 }
 
